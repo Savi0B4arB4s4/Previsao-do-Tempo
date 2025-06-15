@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Surpresa para Ana Clara ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="perguntas" class="caixa">
+    <h1>🌸 Antes de ver a surpresa, responde rapidinho 🌸</h1>
+    <form id="formulario" action="salvar.php" method="POST">
+      <label>1️⃣ Qual o seu nome?</label>
+      <input type="text" name="nome" required>
+
+      <label>2️⃣ Quantos anos você tem?</label>
+      <input type="text" name="idade" required>
+
+      <label>3️⃣ Qual a primeira coisa que chamou sua atenção no Sávio? 😳</label>
+      <input type="text" name="interesse" required>
+
+      <label>4️⃣ Se você fosse descrever o Sávio em uma palavra, qual seria? 😏</label>
+      <input type="text" name="descricao" required>
+
+      <label>5️⃣ Você tá preparada pra ver uma surpresa feita só pra você? 😍</label>
+      <select name="preparada" required>
+        <option value="">Escolha</option>
+        <option value="Sim">Sim, claro!</option>
+        <option value="Tô com medo 😅">Tô com medo 😅</option>
+      </select>
+
+      <button type="submit">Ver a Surpresa ❤️</button>
+    </form>
+  </div>
+
+  <audio id="bgm" loop>
+    <source src="soft/musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
