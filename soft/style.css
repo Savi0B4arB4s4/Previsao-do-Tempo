@@ -1,0 +1,100 @@
+/* Fundo animado */
+body {
+    margin: 0;
+    padding: 0 10px;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: fundoAnimado 20s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  @keyframes fundoAnimado {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+  
+  .caixa {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input, select, textarea, button {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1em;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #ff4d6d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover, button:focus {
+    background-color: #ff1e50;
+    outline: none;
+  }
+  
+  .escondido {
+    display: none;
+  }
+  
+  .coraçao {
+    position: fixed;
+    font-size: 1.5em;
+    animation: subir 6s linear forwards;
+    user-select: none;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  @keyframes subir {
+    0% {
+      bottom: 0;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      bottom: 100vh;
+      opacity: 0;
+      transform: translateY(-100%) scale(1.5);
+    }
+  }
+  
+  @media (max-width: 400px) {
+    body {
+      padding: 8px;
+    }
+    .caixa {
+      padding: 20px 15px;
+    }
+    input, select, textarea, button {
+      padding: 12px;
+      font-size: 1em;
+    }
+  }
+  
